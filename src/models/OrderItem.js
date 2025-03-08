@@ -2,11 +2,6 @@ import { DataTypes } from "sequelize";
 import sequelize from "../db/index.js";
 
 const OrderItem = sequelize.define("OrderItem", {
-  id: {
-    type: DataTypes.INTEGER,
-    autoIncrement: true,
-    primaryKey: true,
-  },
   orderId: {
     type: DataTypes.INTEGER,
     references: {
