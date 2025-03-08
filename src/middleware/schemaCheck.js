@@ -8,3 +8,5 @@ export const schemaChecker = (schema) => async (req, res, next) => {
       next(new ExtendedError(400, err.message));
     }
 };
+
+export default schemaChecker;

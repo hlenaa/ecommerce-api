@@ -1,4 +1,5 @@
 import { Router } from "express"; //import router object from express
+
 //import controllers
 import {
 	getAllCategories,
