@@ -1,8 +1,8 @@
 import { DataTypes } from "sequelize";
-import sequalize from "../db/index.js"; 
+import sequelize from "../db/index.js"; 
 
 //model
-const Category = sequalize.define("Category", {
+const Category = sequelize.define("Category", {
 name: {type: DataTypes.STRING, allowNull: false},
 });
 

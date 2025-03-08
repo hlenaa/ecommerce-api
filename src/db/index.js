@@ -1,5 +1,5 @@
 import {Sequelize} from 'sequelize';
 
-const sequalize = new Sequelize(process.env.PG_URI);
+const sequelize = new Sequelize(process.env.PG_URI);
 
-export default sequalize;
+export default sequelize;
