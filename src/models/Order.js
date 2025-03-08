@@ -1,4 +1,5 @@
 import { DataTypes } from 'sequelize';
+import User from './User.js';
 import sequelize from '../db/index.js';
 
 const Order = sequelize.define('Order', {
@@ -6,7 +7,7 @@ const Order = sequelize.define('Order', {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: 'User',
+            model: User,
             key: 'id',
         },
     },
