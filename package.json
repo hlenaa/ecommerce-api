@@ -1,0 +1,24 @@
+{
+  "name": "ecommerce-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node -r dotenv/config --watch src/index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "joi": "^17.13.3",
+    "pg": "^8.13.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.6"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
