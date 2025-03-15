@@ -34,3 +34,13 @@ export const loginUser = async (req, res, next) => {
     next(error); 
   }
 };
+
+export const getAllUsers = async (req, res, next) => {
+    try {
+      const users = await User.findAll();
+  
+      res.json({ message: "Users retrieved successfully", users });
+    } catch (error) {
+      next(error);
+    }
+  };
