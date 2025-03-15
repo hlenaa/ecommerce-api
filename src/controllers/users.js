@@ -19,16 +19,27 @@ export const registerUser = async (req, res, next) => {
 };
 
 export const loginUser = async (req, res, next) => {
-	try {
-		const { email, password } = req.body;
+  try {
+    const { email, password } = req.body;
 
-		const user = await User.findOne({ where: { email } });
-		if (!user || user.password !== password) {
-			throw new ExtendedError(401, "Invalid email or password");
-		}
+    const user = await User.findOne({ where: { email } });
+    if (!user || user.password !== password) {
+      throw new ExtendedError(401, "Invalid email or password");
+    }
 
-		res.json({ message: "Login successful", user });
-	} catch (error) {
-		next(error);
-	}
+    res.json({ message: "Login successful", user });
+  } catch (error) {
+    next(error); 
+  }
 };
+
+export const getAllUsers = async (req, res, next) => {
+    try {
+      const users = await User.findAll();
+  
+      res.json({ message: "Users retrieved successfully", users });
+    } catch (error) {
+      next(error);
+    }
+  };
+
