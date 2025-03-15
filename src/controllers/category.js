@@ -25,6 +25,7 @@ export const getAllCategories = async (req, res) => {
 };
 
 export const createCategory = async (req, res) => {
+
 	const category = await Category.create(req.body); 
 	res.json(category);
 };

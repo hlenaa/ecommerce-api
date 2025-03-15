@@ -20,7 +20,9 @@ const idCheck = async (req, res, next) => {
 		if (!category) {
 			throw new ExtendedError("Category not found", 404);
 		}
+
 		req.category = category; //save found categoryItem to req object
+
 		next(); //if no error occurs, go to next middleware/controller
 	} catch (err) {
 		next(

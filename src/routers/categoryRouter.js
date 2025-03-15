@@ -10,7 +10,7 @@ import {
 } from "../controllers/category.js";
 //import Schema Validation from joi
 import categorySchema from "../schemas/categorySchema.js";
-import schemaChecker from "../middleware/schemaCheck.js";
+import { schemaChecker } from "../middleware/schemaCheck.js";
 import idCheck from "../middleware/categoryIdCheck.js";
 
 const categoryRouter = Router(); //create a router object

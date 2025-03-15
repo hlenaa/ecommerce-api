@@ -14,7 +14,7 @@ User.hasMany(Order, { foreignKey: "userId", onDelete: "CASCADE" });
 Order.belongsTo(User, { foreignKey: "userId" });
 
 // Order - Product (Many-to-Many via OrderItem)
-Order.belongsToMany(Product, { through: OrderItem, foreignKey: 'orderId' });
-Product.belongsToMany(Order, { through: OrderItem, foreignKey: 'productId' });
+Order.belongsToMany(Product, { through: OrderItem, foreignKey: "orderId" });
+Product.belongsToMany(Order, { through: OrderItem, foreignKey: "productId" });
 
 sequelize.sync(); //create the tables if they do not exist
