@@ -6,7 +6,7 @@ import { registerSchema, loginSchema } from "../schemas/authSchema.js";
 const router = express.Router();
 
 router.post("/register", schemaChecker(registerSchema), registerUser);
-router.post("/login", schemaChecker(loginSchema), loginUser);
+router.get("/login", schemaChecker(loginSchema), loginUser);
 router.get("/", getAllUsers);
 
 export default router;
