@@ -1,7 +1,7 @@
 # Backend Group Project
 with Express, Sequalize, joi
 
-# #Installation
+## Installation
 clone project then: npm i
 
 ## Schema
