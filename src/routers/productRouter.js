@@ -1,10 +1,20 @@
 import express from "express";
-import { getAllProducts, getProductById, createProduct } from "../controllers/productController.js";
+import {
+  getAllProducts,
+  getProductById,
+  createProduct,
+  updateProduct,
+  deleteProduct,
+} from "../controllers/product.js";
+import schemaChecker from "../middleware/schemaCheck.js";
+import { productSchema, updateProductSchema } from "../schemas/productSchema.js";
 
 const router = express.Router();
 
 router.get("/", getAllProducts);
 router.get("/:id", getProductById);
-router.post("/", createProduct);
+router.post("/", schemaChecker(productSchema), createProduct);
+router.put("/:id", schemaChecker(updateProductSchema), updateProduct);
+router.delete("/:id", deleteProduct);
 
 export default router;
