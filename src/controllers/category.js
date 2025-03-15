@@ -25,23 +25,24 @@ export const getAllCategories = async (req, res) => {
 };
 
 export const createCategory = async (req, res) => {
-	const category = await Category.create(req.body);
+
+	const category = await Category.create(req.body); 
 	res.json(category);
 };
 
 export const getCategory = async (req, res) => {
-	const category = req.category;
+	const category = req.category; //passed from IdCheck middleware
 	res.json(category);
 };
 
 export const updateCategory = async (req, res) => {
-	const category = req.category;
+	const category = req.category; //passed from IdCheck middleware
 	await category.update(req.body);
 	res.json(category);
 };
 
 export const deleteCategory = async (req, res) => {
-	const category = req.category;
+	const category = req.category; ///passed from IdCheck middleware
 	await category.destroy();
 	res.json({ message: "Category deleted successfully" });
 };
