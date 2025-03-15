@@ -1,7 +1,7 @@
 import express from "express";
 import { registerUser, loginUser } from "../controllers/users.js";
-import schemaChecker from "../middleware/schemaChecke.js";
-import { registerSchema, loginSchema } from "../schemas/authSchemas.js";
+import schemaChecker from "../middleware/schemaCheck.js";
+import { registerSchema, loginSchema } from "../schemas/authSchema.js";
 
 const router = express.Router();
 
