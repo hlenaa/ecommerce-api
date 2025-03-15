@@ -1,4 +1,4 @@
-import Users from "../models/Users.js";
+import User from "../models/User.js";
 import ExtendedError from "../utils/ExtendedError.js";
 
 export const registerUser = async (req, res, next) => {
